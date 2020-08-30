@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Grid, Cell } from 'react-mdl';
 import Education from './education';
 import Experience from './experience';
-import Skills from './skills';
+
 
 
 class Resume extends Component {
@@ -12,11 +12,7 @@ class Resume extends Component {
         <Grid>
           <Cell col={4}>
             <div style={{textAlign: 'center'}}>
-              <img
-                src="https://www.shareicon.net/download/2015/09/18/103157_man_512x512.png"
-                alt="avatar"
-                style={{height: '200px'}}
-                 />
+              
             </div>
 
             <h2 style={{paddingTop: '2em'}}>Shubha Rashmi</h2>
@@ -35,6 +31,22 @@ class Resume extends Component {
           <Cell className="resume-right-col" col={8}>
             <h2>Education</h2>
 
+            <Education
+                 startYear={2013}
+                 endYear={2017}
+                 schoolName="Graduation"
+                 schoolDescription="Silicon Institute of Technology , Bhubaneswar"
+                 marks="8.07/10(C.G.P.A.)"
+                  />
+
+              <Education
+                 startYear={2011}
+                 endYear={2012}
+                 schoolName="Higher/Senior Secondary Education"
+                 schoolDescription="D.A.V. Public School , Hazaribagh"
+                 marks="87%"
+                  />
+
 
             <Education
               startYear={2009}
@@ -44,21 +56,9 @@ class Resume extends Component {
               marks="9.8/10(C.G.P.A.)"
                />
 
-               <Education
-                 startYear={2011}
-                 endYear={2012}
-                 schoolName="Higher/Senior Secondary Education"
-                 schoolDescription="D.A.V. Public School , Hazaribagh"
-                 marks="87%"
-                  />
+               
 
-              <Education
-                 startYear={2013}
-                 endYear={2017}
-                 schoolName="Graduation"
-                 schoolDescription="Silicon Institute of Technology , Bhubaneswar"
-                 marks="8.07/10(C.G.P.A.)"
-                  />
+              
                 <hr style={{borderTop: '3px solid #e22947'}} />
 
               <h2>Experience</h2>
@@ -72,24 +72,7 @@ class Resume extends Component {
 
               
               <hr style={{borderTop: '3px solid #e22947'}} />
-              <h2>Skills</h2>
-              <Skills
-                skill="javascript"
-                progress={90}
-                />
-                <Skills
-                  skill="HTML/CSS"
-                  progress={80}
-                  />
-                  <Skills
-                    skill="NodeJS"
-                    progress={60}
-                    />
-                    <Skills
-                      skill="React"
-                      progress={50}
-                      />
-
+              
 
           </Cell>
         </Grid>
